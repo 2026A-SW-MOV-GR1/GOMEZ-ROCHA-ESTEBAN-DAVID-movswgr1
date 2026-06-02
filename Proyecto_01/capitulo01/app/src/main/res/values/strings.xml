@@ -1,0 +1,4 @@
+<resources>
+    <string name="greeting">Hello! Vertical mode</string>
+    <string name="app_name">My Application</string>
+</resources>

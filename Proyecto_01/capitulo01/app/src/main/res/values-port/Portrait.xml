@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="saludo">Estas en modo vertical (ES)</string>
+    <color name="text_color">#1E3A8A</color>
+    <color name="background_color">#FEE2E2</color>
+</resources>

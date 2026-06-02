@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Colores para modo horizontal -->
-    <color name="text_color">#C62828</color>
-    <color name="background_color">#FFEBEE</color>
-    <color name="font_color">#C62828</color>
-</resources>
-

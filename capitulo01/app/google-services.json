@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "436705605804",
+    "project_id": "moviles-2026a-gr1-edgr",
+    "storage_bucket": "moviles-2026a-gr1-edgr.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436705605804:android:145ccefee332db54d90709",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ74mRN-JmUnF0W3n3JHEYQtd0FuCSdkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
