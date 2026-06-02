@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Flutter App Resources</string>
+    <string name="app_label">Hello welcome from Flutter</string>
+    <string name="greeting">Hello! Vertical mode</string>
+    <string name="orientation">Orientation: Vertical</string>
+    <string name="language">Language: English</string>
+</resources>
+

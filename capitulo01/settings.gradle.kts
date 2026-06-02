@@ -11,15 +11,24 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
-}
+
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
         google()
         mavenCentral()
+        // Repositorio local del módulo Flutter
+        maven {
+            url = uri("C:/Users/Esteban/Documents/SOFTWARE/7MO SEMESTRE/APLICACIONES MOVILES/GOMEZ-ROCHA-ESTEBAN-DAVID-movswgr1/flutter_module/build/host/outputs/repo")
+        }
+        maven {
+            url = uri("https://storage.googleapis.com/download.flutter.io")
+        }
     }
+}
+
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 
 rootProject.name = "My Application"
