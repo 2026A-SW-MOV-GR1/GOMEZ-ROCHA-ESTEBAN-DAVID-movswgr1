@@ -6,6 +6,7 @@ import '../services/hive_service.dart';
 import 'formulario_screen.dart';
 import 'rest_screen.dart';
 import 'secrets_screen.dart';
+import 'intents_tab_screen.dart';
 
 class ListaScreen extends StatefulWidget {
   const ListaScreen({super.key});
@@ -126,6 +127,15 @@ class _ListaScreenState extends State<ListaScreen> {
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (_) => const SecretsScreen()),
+            ),
+          ),
+
+          IconButton(
+            icon: const Icon(Icons.share),
+            tooltip: 'Intents',
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const IntentsTabScreen()),
             ),
           ),
         ],

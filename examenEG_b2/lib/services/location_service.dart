@@ -4,6 +4,7 @@ import 'package:latlong2/latlong.dart';
 
 class LocationService {
   final Distance _distanceCalculator = const Distance();
+  final Geocoding _geocoding = Geocoding();
 
   /// Solicita permisos y devuelve la posición actual del dispositivo.
   /// Lanza [Exception] con un mensaje entendible si no es posible obtenerla.
@@ -37,11 +38,12 @@ class LocationService {
   /// (por ejemplo sin conexión), sin interrumpir el flujo de la app.
   Future<String?> reverseGeocode(double latitude, double longitude) async {
     try {
-      final placemarks = await placemarkFromCoordinates(latitude, longitude);
+      final placemarks = await _geocoding.placemarkFromCoordinates(latitude, longitude);
       if (placemarks.isEmpty) return null;
       final p = placemarks.first;
       final parts = [p.street, p.subLocality, p.locality, p.administrativeArea]
-          .where((part) => part != null && part.trim().isNotEmpty)
+          .whereType<String>()
+          .where((part) => part.trim().isNotEmpty)
           .toList();
       return parts.isEmpty ? null : parts.join(', ');
     } catch (_) {

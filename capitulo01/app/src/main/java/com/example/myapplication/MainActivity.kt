@@ -38,6 +38,19 @@ class MainActivity : FlutterActivity() {
                     ).show()
                     result.success(null)
                 }
+                "saveCount" -> {
+                    val count = call.argument<Int>("count") ?: 0
+                    getSharedPreferences("lifecycle", MODE_PRIVATE)
+                        .edit()
+                        .putInt("count", count)
+                        .apply()
+                    result.success(null)
+                }
+                "getCount" -> {
+                    val count = getSharedPreferences("lifecycle", MODE_PRIVATE)
+                        .getInt("count", 0)
+                    result.success(count)
+                }
                 else -> result.notImplemented()
             }
         }
